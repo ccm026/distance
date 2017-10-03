@@ -1,16 +1,13 @@
 package myproject.com.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class login {
-    private JPanel frame;
+    public JPanel frame;
     private JLabel label1;
     private JLabel label2;
     private JLabel label3;
@@ -18,22 +15,9 @@ public class login {
     private JPasswordField pass;
     private JButton OKButton;
 
-    @RequestMapping ("/")
-    public String app(){
-        initialize();
-        return "done";
-    }
 
-    protected void initialize() {
-        JFrame panel = new JFrame("Distance Monitoring");
-        panel.setContentPane((new login().frame));
-        panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel.pack();
-        frame.setVisible(true);
 
-         }
-
-    private login() {
+    public login() {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
