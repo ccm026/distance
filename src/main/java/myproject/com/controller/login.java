@@ -3,6 +3,7 @@ package myproject.com.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import sun.plugin2.message.JavaScriptGetWindowMessage;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,14 +19,18 @@ public class login {
     private JPasswordField pass;
     private JButton OKButton;
 
-
     @RequestMapping ("/")
-    public void initialize() {
+    public String app(){
+        return initialize();
+    }
+
+    private String initialize() {
         JFrame panel = new JFrame("Distance Monitoring");
         panel.setContentPane((new login().frame));
         panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.pack();
         frame.setVisible(true);
+        return "Hello";
          }
 
     public login() {
@@ -46,6 +51,6 @@ public class login {
             }
 
         });
-        return;
+
     }
 }
