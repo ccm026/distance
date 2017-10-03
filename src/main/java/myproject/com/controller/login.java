@@ -28,7 +28,7 @@ public class login {
         frame.setVisible(true);
          }
 
-    private login() {
+    public login() {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,5 +46,6 @@ public class login {
             }
 
         });
+        return;
     }
 }
