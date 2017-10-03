@@ -3,13 +3,12 @@ package myproject.com.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.plugin2.message.JavaScriptGetWindowMessage;
+
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-@RestController
 public class login {
     private JPanel frame;
     private JLabel label1;
@@ -21,19 +20,20 @@ public class login {
 
     @RequestMapping ("/")
     public String app(){
-        return initialize();
+        initialize();
+        return "done";
     }
 
-    private String initialize() {
+    protected void initialize() {
         JFrame panel = new JFrame("Distance Monitoring");
         panel.setContentPane((new login().frame));
         panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.pack();
         frame.setVisible(true);
-        return "Hello";
+
          }
 
-    public login() {
+    private login() {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
