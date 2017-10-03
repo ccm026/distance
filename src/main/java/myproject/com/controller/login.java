@@ -44,5 +44,6 @@ public class login {
         panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.pack();
         frame.setVisible(true);
+        return;
          }
 }
