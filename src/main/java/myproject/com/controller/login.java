@@ -18,7 +18,18 @@ public class login {
     private JPasswordField pass;
     private JButton OKButton;
 
-    public login() {
+
+    @RequestMapping ("/")
+    public void initialize() {
+        JFrame panel = new JFrame("Distance Monitoring");
+        panel.setContentPane((new login().frame));
+        panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel.pack();
+        frame.setVisible(true);
+        return;
+         }
+
+    private login() {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,13 +48,4 @@ public class login {
 
         });
     }
-    @RequestMapping ("/")
-    public void initialize() {
-        JFrame panel = new JFrame("Distance Monitoring");
-        panel.setContentPane((new login().frame));
-        panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel.pack();
-        frame.setVisible(true);
-        return;
-         }
 }
