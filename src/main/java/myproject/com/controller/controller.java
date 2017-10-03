@@ -9,11 +9,11 @@ import javax.swing.*;
 public class controller {
 
     @RequestMapping("/")
-    public void initialize() {
+    public void init() {
         JFrame panel = new JFrame("Distance Monitoring");
         panel.setContentPane((new login().frame));
         panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel.pack();
+        //panel.pack();
         //frame.setVisible(true);
 
     }

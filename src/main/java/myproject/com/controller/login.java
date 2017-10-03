@@ -24,9 +24,10 @@ public class login {
                 String password = pass.getText();
                 String username = user.getText();
 
-                if (password.contains("admin") && username.contains("password")) {
+                if (password.contains("password") && username.contains("admin")) {
                     pass.setText(null);
                     user.setText(null);
+                    return;
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid username or password", "Login error", JOptionPane.ERROR_MESSAGE);
                     pass.setText(null);
